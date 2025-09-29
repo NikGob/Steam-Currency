@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamCurrencyAPI", "src\SteamCurrencyAPI\SteamCurrencyAPI.csproj", "{6D7A2641-E8B3-428B-804E-5E32477254E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamCurrencyAPI.Tests", "src\SteamCurrencyAPI.Tests\SteamCurrencyAPI.Tests.csproj", "{C152F034-BCF0-4E4D-9FC3-CB3DB81177F7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6D7A2641-E8B3-428B-804E-5E32477254E2} = {6D7A2641-E8B3-428B-804E-5E32477254E2}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D7A2641-E8B3-428B-804E-5E32477254E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D7A2641-E8B3-428B-804E-5E32477254E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D7A2641-E8B3-428B-804E-5E32477254E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D7A2641-E8B3-428B-804E-5E32477254E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C152F034-BCF0-4E4D-9FC3-CB3DB81177F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C152F034-BCF0-4E4D-9FC3-CB3DB81177F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C152F034-BCF0-4E4D-9FC3-CB3DB81177F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C152F034-BCF0-4E4D-9FC3-CB3DB81177F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DA39888-8E80-4380-B8B9-8607ED86F37D}
+	EndGlobalSection
+EndGlobal

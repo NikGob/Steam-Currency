@@ -1,0 +1,6 @@
+@SteamCurrencyAPI_HostAddress = http://localhost:5120
+
+GET {{SteamCurrencyAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
