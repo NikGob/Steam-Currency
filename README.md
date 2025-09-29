@@ -9,7 +9,7 @@
 
 </div>
 
-### 💹 A modern REST API for real-time currency exchange rates with Steam integration
+> ### 💹 A modern REST API for real-time currency exchange rates with Steam integration
 
 [🌐 Live Frontend](https://steam.nikgob.com) • [📡 API Endpoint](https://steam-api.nikgob.com) • [📖 API Docs](https://steam-api.nikgob.com/swagger)
 
@@ -54,7 +54,6 @@
 ## 🛠 Tech Stack
 
 ### Backend
-
 - **Framework**: ASP.NET Core 8.0
 - **Database**: MongoDB
 - **Job Scheduling**: Quartz.NET
@@ -63,21 +62,19 @@
 - **Language**: C# (.NET 8.0)
 
 ### Key Dependencies
-
-- **Microsoft.Extensions.Hosting** - Hosting infrastructure
-- **MongoDB.Driver** - MongoDB integration
-- **Newtonsoft.Json** - JSON serialization
-- **Quartz.AspNetCore** - Background job scheduling
-- **Swashbuckle.AspNetCore** - API documentation
+- Microsoft.Extensions.Hosting - Hosting infrastructure
+- MongoDB.Driver - MongoDB integration
+- Newtonsoft.Json - JSON serialization
+- Quartz.AspNetCore - Background job scheduling
+- Swashbuckle.AspNetCore - API documentation
 
 ---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-
-- **Option 1 (Docker)**: Docker & Docker Compose
-- **Option 2 (Local)**: .NET 8.0 SDK + MongoDB instance
+- **Option 1** (Docker): Docker & Docker Compose
+- **Option 2** (Local): .NET 8.0 SDK + MongoDB instance
 
 ### Running with Docker
 
@@ -91,7 +88,7 @@ docker build -t steam-currency-api .
 docker run -p 8080:8080 -p 8081:8081 steam-currency-api
 ```
 
-🎉 API will be available at: http://localhost:8080
+🎉 API will be available at: [http://localhost:8080](http://localhost:8080)
 
 ### Running Locally
 
@@ -108,16 +105,15 @@ cd src/SteamCurrencyAPI
 dotnet run
 ```
 
-🎉 API will be available at: https://localhost:5001 or http://localhost:5000
+🎉 API will be available at: [https://localhost:5001](https://localhost:5001) or [http://localhost:5000](http://localhost:5000)
 
 ---
 
 ## 📡 API Endpoints
 
 ### Base URL
-
-- **Production**: https://steam-api.nikgob.com
-- **Local**: http://localhost:8080 (Docker) or https://localhost:5001 (local)
+- **Production**: [https://steam-api.nikgob.com](https://steam-api.nikgob.com)
+- **Local**: [http://localhost:8080](http://localhost:8080) (Docker) or [https://localhost:5001](https://localhost:5001) (local)
 
 ### Available Endpoints
 
@@ -128,8 +124,8 @@ GET /api/currency/latest-rate?currencyCode=RUB&currencyBaseCode=KZT
 ```
 
 **Parameters:**
-- `currencyCode` (string): Target currency code
-- `currencyBaseCode` (string): Base currency code
+- currencyCode (string): Target currency code
+- currencyBaseCode (string): Base currency code
 
 **Example Response:**
 ```json
@@ -150,10 +146,10 @@ GET /api/currency/rates?currencyCode=RUB&currencyBaseCode=KZT&startDate=2023-01-
 ```
 
 **Parameters:**
-- `currencyCode` (string): Target currency code
-- `currencyBaseCode` (string): Base currency code
-- `startDate` (string): Start date (YYYY-MM-DD format)
-- `endDate` (string): End date (YYYY-MM-DD format)
+- currencyCode (string): Target currency code
+- currencyBaseCode (string): Base currency code
+- startDate (string): Start date (YYYY-MM-DD format)
+- endDate (string): End date (YYYY-MM-DD format)
 
 #### 🔍 Get Available Currency Codes
 
@@ -174,7 +170,7 @@ GET /api/currency/codes
 
 ### 📖 Interactive API Documentation
 
-Visit `/swagger` endpoint for interactive API documentation:
+Visit /swagger endpoint for interactive API documentation:
 - **Production**: [https://steam-api.nikgob.com/swagger](https://steam-api.nikgob.com/swagger)
 - **Local**: [http://localhost:8080/swagger](http://localhost:8080/swagger)
 
@@ -196,6 +192,8 @@ ASPNETCORE_URLS="http://+:8080;https://+:8081"
 
 ### appsettings.json Example
 
+> **Note**: This example configuration is safe to copy as it contains no private tokens or sensitive data.
+
 ```json
 {
   "Logging": {
@@ -204,11 +202,15 @@ ASPNETCORE_URLS="http://+:8080;https://+:8081"
       "Microsoft.AspNetCore": "Warning"
     }
   },
-  "ConnectionStrings": {
-    "MongoDB": "mongodb://localhost:27017",
-    "DatabaseName": "SteamCurrencyDB"
+  "AllowedHosts": "*",
+  "MongoDB": {
+    "ConnectionString": "mongodb/connection/string",
+    "DatabaseName": "SteamCurrency",
+    "CollectionName": "Сurrencies"
   },
-  "AllowedHosts": "*"
+  "SteamAPI": {
+    "URL": "https://steamcommunity.com/market/priceoverview/?appid={appId}&market_hash_name={product}&currency={currencyId}"
+  }
 }
 ```
 
@@ -237,7 +239,6 @@ Steam-Currency/
 ```
 
 ### Architecture Patterns
-
 - **Clean Architecture**: Separation of concerns with clear layers
 - **Dependency Injection**: Built-in DI container
 - **Repository Pattern**: Data access abstraction
@@ -252,11 +253,11 @@ We welcome contributions! Here's how you can help:
 
 ### 🔄 How to Contribute
 
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Commit your changes**: `git commit -m 'Add amazing feature'`
-4. **Push to the branch**: `git push origin feature/amazing-feature`
-5. **Open a Pull Request**
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
 
 ### 📋 Contribution Guidelines
 
@@ -269,7 +270,6 @@ We welcome contributions! Here's how you can help:
 ### 🐛 Reporting Issues
 
 Found a bug? Please create an issue with:
-
 - Detailed description
 - Steps to reproduce
 - Expected vs actual behavior
