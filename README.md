@@ -2,16 +2,16 @@
 
 <div align="center">
 
-![License](https://img.shields.io/github/license/NikGob/Steam-Currency)
+![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![.NET](https://img.shields.io/badge/.NET-8.0-blue)
 ![Docker](https://img.shields.io/badge/Docker-Ready-blue)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Database-green)
 
+</div>
+
 ### 💹 A modern REST API for real-time currency exchange rates with Steam integration
 
 [🌐 Live Frontend](https://steam.nikgob.com) • [📡 API Endpoint](https://steam-api.nikgob.com) • [📖 API Docs](https://steam-api.nikgob.com/swagger)
-
-</div>
 
 ---
 
@@ -25,7 +25,6 @@
   - [Running Locally](#running-locally)
 - [📡 API Endpoints](#-api-endpoints)
 - [🔧 Configuration](#-configuration)
-- [🧪 Testing](#-testing)
 - [📈 Architecture](#-architecture)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
@@ -49,13 +48,13 @@
 - 🔄 Quartz.NET for scheduled jobs
 - 📝 Swagger/OpenAPI documentation
 - ⚡ Asynchronous operations
-- 🧪 Unit tests included
 
 ---
 
 ## 🛠 Tech Stack
 
 ### Backend
+
 - **Framework**: ASP.NET Core 8.0
 - **Database**: MongoDB
 - **Job Scheduling**: Quartz.NET
@@ -64,11 +63,12 @@
 - **Language**: C# (.NET 8.0)
 
 ### Key Dependencies
-- `Microsoft.Extensions.Hosting` - Hosting infrastructure
-- `MongoDB.Driver` - MongoDB integration
-- `Newtonsoft.Json` - JSON serialization
-- `Quartz.AspNetCore` - Background job scheduling
-- `Swashbuckle.AspNetCore` - API documentation
+
+- **Microsoft.Extensions.Hosting** - Hosting infrastructure
+- **MongoDB.Driver** - MongoDB integration
+- **Newtonsoft.Json** - JSON serialization
+- **Quartz.AspNetCore** - Background job scheduling
+- **Swashbuckle.AspNetCore** - API documentation
 
 ---
 
@@ -91,7 +91,7 @@ docker build -t steam-currency-api .
 docker run -p 8080:8080 -p 8081:8081 steam-currency-api
 ```
 
-**🎉 API will be available at**: http://localhost:8080
+🎉 API will be available at: http://localhost:8080
 
 ### Running Locally
 
@@ -108,19 +108,21 @@ cd src/SteamCurrencyAPI
 dotnet run
 ```
 
-**🎉 API will be available at**: https://localhost:5001 or http://localhost:5000
+🎉 API will be available at: https://localhost:5001 or http://localhost:5000
 
 ---
 
 ## 📡 API Endpoints
 
 ### Base URL
-- **Production**: `https://steam-api.nikgob.com`
-- **Local**: `http://localhost:8080` (Docker) or `https://localhost:5001` (local)
+
+- **Production**: https://steam-api.nikgob.com
+- **Local**: http://localhost:8080 (Docker) or https://localhost:5001 (local)
 
 ### Available Endpoints
 
 #### 📊 Get Latest Exchange Rate
+
 ```http
 GET /api/currency/latest-rate?currencyCode=RUB&currencyBaseCode=KZT
 ```
@@ -142,6 +144,7 @@ GET /api/currency/latest-rate?currencyCode=RUB&currencyBaseCode=KZT
 ```
 
 #### 📈 Get Historical Rates
+
 ```http
 GET /api/currency/rates?currencyCode=RUB&currencyBaseCode=KZT&startDate=2023-01-01&endDate=2023-01-31
 ```
@@ -153,6 +156,7 @@ GET /api/currency/rates?currencyCode=RUB&currencyBaseCode=KZT&startDate=2023-01-
 - `endDate` (string): End date (YYYY-MM-DD format)
 
 #### 🔍 Get Available Currency Codes
+
 ```http
 GET /api/currency/codes
 ```
@@ -169,9 +173,10 @@ GET /api/currency/codes
 ```
 
 ### 📖 Interactive API Documentation
+
 Visit `/swagger` endpoint for interactive API documentation:
-- **Production**: https://steam-api.nikgob.com/swagger
-- **Local**: http://localhost:8080/swagger
+- **Production**: [https://steam-api.nikgob.com/swagger](https://steam-api.nikgob.com/swagger)
+- **Local**: [http://localhost:8080/swagger](http://localhost:8080/swagger)
 
 ---
 
@@ -209,35 +214,10 @@ ASPNETCORE_URLS="http://+:8080;https://+:8081"
 
 ---
 
-## 🧪 Testing
-
-### Run Unit Tests
-
-```bash
-# Run all tests
-dotnet test
-
-# Run tests with coverage
-dotnet test --collect:"XPlat Code Coverage"
-
-# Run specific test project
-dotnet test src/SteamCurrencyAPI.Tests
-```
-
-### API Testing with HTTP Files
-
-The project includes `SteamCurrencyAPI.http` file for manual API testing:
-
-```bash
-# Use in Visual Studio, VS Code with REST Client extension, or JetBrains IDEs
-# File: src/SteamCurrencyAPI/SteamCurrencyAPI.http
-```
-
----
-
 ## 📈 Architecture
 
 ### Project Structure
+
 ```
 Steam-Currency/
 ├── src/
@@ -257,6 +237,7 @@ Steam-Currency/
 ```
 
 ### Architecture Patterns
+
 - **Clean Architecture**: Separation of concerns with clear layers
 - **Dependency Injection**: Built-in DI container
 - **Repository Pattern**: Data access abstraction
@@ -271,11 +252,11 @@ We welcome contributions! Here's how you can help:
 
 ### 🔄 How to Contribute
 
-1. **Fork** the repository
-2. **Create** a feature branch: `git checkout -b feature/amazing-feature`
-3. **Commit** your changes: `git commit -m 'Add amazing feature'`
-4. **Push** to the branch: `git push origin feature/amazing-feature`
-5. **Open** a Pull Request
+1. **Fork the repository**
+2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
+3. **Commit your changes**: `git commit -m 'Add amazing feature'`
+4. **Push to the branch**: `git push origin feature/amazing-feature`
+5. **Open a Pull Request**
 
 ### 📋 Contribution Guidelines
 
@@ -288,6 +269,7 @@ We welcome contributions! Here's how you can help:
 ### 🐛 Reporting Issues
 
 Found a bug? Please create an issue with:
+
 - Detailed description
 - Steps to reproduce
 - Expected vs actual behavior
@@ -298,11 +280,13 @@ Found a bug? Please create an issue with:
 ## 📊 Live Deployment
 
 ### 🌐 Production URLs
-- **Frontend Application**: https://steam.nikgob.com
-- **API Endpoint**: https://steam-api.nikgob.com
-- **API Documentation**: https://steam-api.nikgob.com/swagger
+
+- **Frontend Application**: [https://steam.nikgob.com](https://steam.nikgob.com)
+- **API Endpoint**: [https://steam-api.nikgob.com](https://steam-api.nikgob.com)
+- **API Documentation**: [https://steam-api.nikgob.com/swagger](https://steam-api.nikgob.com/swagger)
 
 ### 🚀 Deployment Features
+
 - **High Availability**: Load-balanced deployment
 - **SSL/HTTPS**: Secure connections
 - **MongoDB Atlas**: Cloud database
@@ -313,9 +297,10 @@ Found a bug? Please create an issue with:
 
 ## 📄 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ### 📜 MIT License Summary
+
 - ✅ Commercial use allowed
 - ✅ Modification allowed
 - ✅ Distribution allowed
@@ -327,28 +312,25 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ## 📞 Contact
 
 ### 👨‍💻 Developer
+
 **NikGob** - Project Maintainer
 
 ### 🔗 Links
+
 - 🐙 **GitHub**: [@NikGob](https://github.com/NikGob)
 - 🌐 **Website**: [nikgob.com](https://nikgob.com)
 - 📧 **API Support**: Contact through GitHub issues
 
 ### 🚀 Project Links
+
 - 📦 **Repository**: [Steam-Currency](https://github.com/NikGob/Steam-Currency)
 - 🌐 **Live Demo**: [steam.nikgob.com](https://steam.nikgob.com)
 - 📡 **API**: [steam-api.nikgob.com](https://steam-api.nikgob.com)
 
 ---
 
-<div align="center">
-
 ### 🙏 Thank you for using Steam Currency API!
 
-**If this project helped you, please consider giving it a ⭐**
+If this project helped you, please consider giving it a ⭐
 
-![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)
-![C#](https://img.shields.io/badge/Made%20with-C%23-purple.svg)
-![.NET Core](https://img.shields.io/badge/.NET%20Core-8.0-blue.svg)
-
-</div>
+![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg) ![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=c-sharp&logoColor=white) ![.NET Core](https://img.shields.io/badge/.NET%20Core-5C2D91?style=flat&logo=.net&logoColor=white)
