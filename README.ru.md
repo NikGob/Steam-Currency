@@ -24,7 +24,7 @@
 <div align="center">
   
 **Язык / Language:** 
-[🇷🇺 Русский](README.ru.md) | [🇬🇧 English](README.md)
+[🇷🇺 Русский](README.ru.md) | [en English](README.md)
 
 </div>
 
