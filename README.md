@@ -3,7 +3,7 @@
 
 <div align="center">
   
- ### 💹 A modern REST API for currency exchange rates with Steam integration
+ ### 💹 A modern REST API for steam currency exchange rates 
 
 <div align="center">
 
