@@ -1,5 +1,10 @@
 # 🏦 Steam Currency API
 
+
+<div align="center">
+  
+ ### 💹 A modern REST API for currency exchange rates with Steam integration
+
 <div align="center">
 
 ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
@@ -8,10 +13,19 @@
 ![MongoDB](https://img.shields.io/badge/MongoDB-Database-green)
 
 </div>
-
-> ### 💹 A modern REST API for real-time currency exchange rates with Steam integration
-
+  
 [🌐 Live Frontend](https://steam.nikgob.com) • [📡 API Endpoint](https://steam-api.nikgob.com) • [📖 API Docs](https://steam-api.nikgob.com/swagger)
+</div>
+
+
+<div align="center">
+
+**Язык / Language:** 
+[🇷🇺 Русский](README.ru.md) | [🇬🇧 English](README.md)
+
+</div>
+
+
 
 ---
 
