@@ -402,8 +402,3 @@ Steam-Currency/
 ![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg) ![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=c-sharp&logoColor=white) ![.NET Core](https://img.shields.io/badge/.NET%20Core-5C2D91?style=flat&logo=.net&logoColor=white)
 
 
-
-
-3. **Добавь то же самое** в начало `README.ru.md` для обратной навигации
-
-Это стандартный подход в open-source проектах - держать переводы в отдельных файлах типа `README.ru.md`, `README.zh.md` и т.д.
